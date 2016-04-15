@@ -1,1 +1,7 @@
-env/*
+*.pyc
+*.pyo
+app.db
+search.db
+flask
+*.mo
+
