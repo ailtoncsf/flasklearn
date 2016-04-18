@@ -6,7 +6,8 @@ from model import Post, app
 @app.route('/')
 def post_index():
     post = Post.query.all()
-    return render_template('index.html', post=post)
+    #return render_template('index.html', post=post)
+    return render_template('index_temp.html', post=post)
 
 
 # CREATE
