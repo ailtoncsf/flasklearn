@@ -5,11 +5,11 @@ db_con = None
 try:
 
     # Create a database session
-    db_con = psycopg2.connect(database='webgis', user='postgres', password='123456')
+    db_con = psycopg2.connect(host='localhost', database='webgis', user='postgres', password='123456')
 
     # Create a client cursor to execute commands
     cursor = db_con.cursor()
-    cursor.execute("CREATE TABLE customers (id SERIAL PRIMARY KEY, name VARCHAR age INTEGER);")
+    cursor.execute("CREATE TABLE customers (id SERIAL PRIMARY KEY, name VARCHAR, age INTEGER);")
 
     # The variables placeholder must always be a %s, psycop2 will automatically convert the values to SQL literal
     cursor.execute("INSERT INTO customers ( name, AGE) VALUES (%s, %s)", ("leo", 26))
