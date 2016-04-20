@@ -10,6 +10,22 @@ def post_index():
     return render_template('index_temp.html', post=post)
 
 
+# CONTACT
+@app.route('/contact', methods=['POST', 'GET'])
+def contact_add():
+    return render_template('contact.html')
+
+# ABOUT
+@app.route('/about', methods=['POST', 'GET'])
+def about():
+    return render_template('about.html')
+
+# POST
+@app.route('/post', methods=['POST', 'GET'])
+def post():
+    return render_template('post.html')
+
+
 # CREATE
 @app.route('/add', methods=['POST', 'GET'])
 def post_add():

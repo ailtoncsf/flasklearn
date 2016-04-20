@@ -1,17 +1,10 @@
-{% with messages = get_flashed_messages() %}
-{% if messages %}
-<ul class=flashes>
-    {% for message in messages %}
-    <li>{{ message }}</li>
-    {% endfor %}
-</ul>
-{% endif %}
-{% endwith %}
+{% extends "base.html" %}
+{% block content %}
 
-<div class="center row">
-    <div class="large-12 columns">
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <fieldset>
-
+            <p>View UPDATE</p>
             <form action="" method="POST">
                 <input type="text" name="author" value="{{post.author}}" required/>
                 <label>Title<input type="text" name="title" value="{{post.title}}" required/></label>
@@ -34,3 +27,4 @@
         </fieldset>
     </div>
 </div>
+{% endblock %}
